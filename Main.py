@@ -24,4 +24,5 @@ print("Delta V (changes in velocity in meters per second) needed: "+str(output.d
 print("Initial time in seconds is "+str(output.initialTimeSecond)+"s, equals to "+str(datetime.timedelta(seconds=round(output.initialTimeSecond))))
 print("Final time in seconds is "+str(output.finalTimeSecond)+"s, equals to "+str(datetime.timedelta(seconds=round(output.finalTimeSecond))))
 if len(output.messages):
+    print('\n')
     print(*output.messages, sep='\n')
