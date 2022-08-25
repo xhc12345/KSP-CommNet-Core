@@ -1,12 +1,11 @@
 from math import pi, sqrt
-
+from commNetMathInput import commNetMathInput
 from commNetMathOutput import commNetMathOutput
-
 
 GRAVITATIONAL_CONSTANT = 6.67408e-11 # Newton's gravitational constant
 
 class commNetMathCalculation:
-    def computeResult(input):
+    def computeResult(input: commNetMathInput) -> commNetMathOutput:
         stdGravParamM = GRAVITATIONAL_CONSTANT * input.bodyMassKilogram
         stdGravParamKM = stdGravParamM / (1000 ** 3)
 
