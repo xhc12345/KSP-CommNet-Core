@@ -2,9 +2,7 @@ class commNetMathOutput:
     initialOrbitPerigeeMeter = -1
     deltaVelocityMeterPerSecond = -1
     initialTimeSecond = -1
-    initialTimeHour = -1
     finalTimeSecond = -1
-    finalTimeHour = -1
     messages = []
 
     def __init__(self, perigee, deltaV, initTimeSec, finalTimeSec):
