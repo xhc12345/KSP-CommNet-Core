@@ -3,10 +3,10 @@ import timeit
 from commNetMathCalculation import commNetMathCalculation
 from commNetMathInput import commNetMathInput, commNetMathInput_noTargetOrbit
 
-objMassKG = 5.9722e24
-objRadiusM = 6.3781e6
-finalOrbitHeightM = 9009000
-numberOfSatellites = 4
+objMassKG = 6.4169e23
+objRadiusM = 3396200
+finalOrbitHeightM = 1506600 + objRadiusM
+numberOfSatellites = 6
 
 #input = commNetMathInput_noTargetOrbit(objMassKG, objRadiusM, numberOfSatellites)
 input = commNetMathInput(objMassKG, objRadiusM, finalOrbitHeightM, numberOfSatellites)

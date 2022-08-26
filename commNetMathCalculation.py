@@ -13,13 +13,13 @@ class commNetMathCalculation:
         stdGravParamM = GRAVITATIONAL_CONSTANT * input.bodyMassKilogram # m^3/s^2
         stdGravParamKM = stdGravParamM / (1000 ** 3)    # km^3/s^2
 
-        finalOrbitRadiusKM = (input.targetOrbitHeightMeter + input.bodyRadiusMeter) / 1000
+        #finalOrbitRadiusKM = (input.targetOrbitHeightMeter + input.bodyRadiusMeter) / 1000
+        finalOrbitRadiusKM = input.targetOrbitHeightMeter / 1000
         finalOrbitalPeriod = 2 * pi * sqrt(finalOrbitRadiusKM**3 / stdGravParamKM)  # seconds
         initialOrbitalPeriod = (input.numberOfSatellites-1)/input.numberOfSatellites * finalOrbitalPeriod   # seconds
 
         # a_i is the semi major axis of the initial orbit, half way point between perigee and apogee
         a_i = ((stdGravParamKM * initialOrbitalPeriod**2) / (4 * pi * pi)) ** (1./3.)
-        print("a_i = "+str(a_i))
         initialOrbitPerigee = (2*a_i - finalOrbitRadiusKM) * 1000   # meters
         initialOrbitPerigeeHeightM = initialOrbitPerigee - input.bodyRadiusMeter
         if(initialOrbitPerigeeHeightM<=0):
